@@ -56,7 +56,7 @@ jobs:
           DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_TOKEN }}
         run: |
           doctl auth init --access-token $DIGITALOCEAN_ACCESS_TOKEN
-          doctl apps update YOUR_APP_ID --spec app.yaml
+          doctl apps update ${{ secrets.DIGITALOCEAN_APP_ID }} --spec app.yaml
 
       - name: Create deployment status
         uses: chrnorm/deployment-status@v2
