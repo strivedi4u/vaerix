@@ -9,6 +9,11 @@ COPY package.json package-lock.json ./
 # Install dependencies
 RUN npm ci
 
+# Work around npm optional-deps edge cases where Rolldown's platform binding
+# may not be present in the image (Vite 8 depends on Rolldown).
+RUN ROLLDOWN_VERSION="$(node -p "require('./node_modules/rolldown/package.json').version")" \
+  && npm install --no-save --no-audit --no-fund "@rolldown/binding-linux-x64-musl@${ROLLDOWN_VERSION}"
+
 # Copy source code
 COPY . .
 
