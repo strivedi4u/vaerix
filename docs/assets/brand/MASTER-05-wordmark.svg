@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" width="1600" height="400">
+  <title>VAELRIX — Wordmark (Dark Theme)</title>
+
+  <!-- Top gold rule -->
+  <line x1="550" y1="80" x2="1050" y2="80" stroke="#C5A35A" stroke-width="1.2"/>
+
+  <!-- Signature wordmark -->
+  <g transform="translate(270 150)">
+    <!-- V glyph crown -->
+    <g fill="#C5A35A">
+      <rect x="19" y="36" width="10" height="10" transform="rotate(45 24 41)"/>
+      <rect x="113" y="14" width="14" height="14" transform="rotate(45 120 21)"/>
+      <rect x="211" y="36" width="10" height="10" transform="rotate(45 216 41)"/>
+    </g>
+    <!-- V glyph -->
+    <path d="M 24 75 L 120 186 L 216 75"
+          fill="none" stroke="#C5A35A" stroke-width="14"
+          stroke-linecap="square" stroke-linejoin="miter"/>
+    <!-- AELRI text -->
+    <text x="275" y="186"
+          font-family="'Cormorant Garamond', 'EB Garamond', Georgia, serif"
+          font-size="150" font-weight="500" fill="#F5F1E8"
+          letter-spacing="26">AELRI</text>
+    <!-- X glyph -->
+    <g stroke-linecap="square" fill="none">
+      <path d="M 940 75 L 1040 186" stroke="#C5A35A" stroke-width="14"/>
+      <path d="M 1040 75 L 940 186" stroke="#F5F1E8" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Bottom gold rule -->
+  <line x1="550" y1="290" x2="1050" y2="290" stroke="#C5A35A" stroke-width="1.2"/>
+
+  <!-- Micro-tagline -->
+  <text x="800" y="335"
+        font-family="'Cormorant Garamond', Georgia, serif"
+        font-size="12" fill="#C5A35A"
+        text-anchor="middle" letter-spacing="10">DRESSED · TO · REIGN</text>
+</svg>

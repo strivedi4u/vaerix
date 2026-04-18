@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/vaerix/assets/brand/MASTER-01-primary-mark.svg" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="VAELRIX — Premium streetwear where antiquarian alchemy meets modern silhouettes. Dressed to Reign. Drop 01 now available." />
+    <meta name="theme-color" content="#050505" />
+    <title>VAELRIX — Dressed to Reign | Premium Streetwear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var encoded = params.get('p');
+        if (!encoded) return;
+
+        var decoded = decodeURIComponent(encoded);
+        var basePath = window.location.pathname;
+        if (basePath.length > 1 && basePath.endsWith('/')) {
+          basePath = basePath.slice(0, -1);
+        }
+
+        window.history.replaceState(null, '', basePath + decoded);
+      })();
+    </script>
+    <script type="module" crossorigin src="/vaerix/assets/index-C0Bl9_bn.js"></script>
+    <link rel="stylesheet" crossorigin href="/vaerix/assets/index-B02dXmCE.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

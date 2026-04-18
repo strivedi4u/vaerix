@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Not Found</title>
+  </head>
+  <body>
+    <script>
+      (function () {
+        // GitHub Pages project sites are served from /<repo>.
+        // If you rename the repo, update this value.
+        var base = '/vaerix';
+
+        var path = window.location.pathname || '/';
+        var relative = path.indexOf(base) === 0 ? path.slice(base.length) : path;
+
+        var target =
+          base +
+          '/?p=' +
+          encodeURIComponent(relative + window.location.search + window.location.hash);
+
+        window.location.replace(window.location.origin + target);
+      })();
+    </script>
+  </body>
+</html>

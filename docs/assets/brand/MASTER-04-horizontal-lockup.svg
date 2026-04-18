@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 400" width="1800" height="400">
+  <title>VAELRIX — Horizontal Lockup (Signature Glyphs)</title>
+  <desc>Primary crowned V mark left, signature VAELRIX wordmark right, divided by gold hairline.</desc>
+  <rect width="1800" height="400" fill="#F5F1E8"/>
+
+  <!-- Primary crowned V mark, left -->
+  <g transform="translate(230 200) scale(0.30)">
+    <g transform="translate(-500 -500)">
+      <g fill="#C5A35A">
+        <rect x="269" y="219" width="22" height="22" transform="rotate(45 280 230)"/>
+        <rect x="483" y="183" width="34" height="34" transform="rotate(45 500 200)"/>
+        <rect x="709" y="219" width="22" height="22" transform="rotate(45 720 230)"/>
+      </g>
+      <path d="M 280 310 L 500 790 L 720 310"
+            fill="none" stroke="#0A0A0A" stroke-width="52"
+            stroke-linecap="square" stroke-linejoin="miter"/>
+    </g>
+  </g>
+
+  <!-- Vertical gold divider -->
+  <line x1="440" y1="130" x2="440" y2="270" stroke="#C5A35A" stroke-width="1.2"/>
+
+  <!-- Signature wordmark -->
+  <g transform="translate(490 80)">
+    <!-- V glyph crown -->
+    <g fill="#C5A35A">
+      <rect x="19" y="36" width="10" height="10" transform="rotate(45 24 41)"/>
+      <rect x="113" y="14" width="14" height="14" transform="rotate(45 120 21)"/>
+      <rect x="211" y="36" width="10" height="10" transform="rotate(45 216 41)"/>
+    </g>
+    <!-- V glyph strokes -->
+    <path d="M 24 75 L 120 186 L 216 75"
+          fill="none" stroke="#0A0A0A" stroke-width="14"
+          stroke-linecap="square" stroke-linejoin="miter"/>
+    <!-- AELRI text -->
+    <text x="275" y="186"
+          font-family="'Cormorant Garamond', 'EB Garamond', Georgia, serif"
+          font-size="150" font-weight="500" fill="#0A0A0A"
+          letter-spacing="26">AELRI</text>
+    <!-- X glyph -->
+    <g stroke-linecap="square" fill="none">
+      <path d="M 940 75 L 1040 186" stroke="#C5A35A" stroke-width="14"/>
+      <path d="M 1040 75 L 940 186" stroke="#0A0A0A" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Tagline under wordmark -->
+  <text x="990" y="240"
+        font-family="'Cormorant Garamond', Georgia, serif"
+        font-size="18" font-style="italic" fill="#C5A35A"
+        text-anchor="middle" letter-spacing="11">Dressed to Reign</text>
+</svg>

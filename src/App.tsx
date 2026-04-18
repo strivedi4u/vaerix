@@ -11,10 +11,14 @@ import Checkout from './pages/Checkout';
 import './index.css';
 
 function App() {
+  const baseName = import.meta.env.BASE_URL === '/'
+    ? '/'
+    : import.meta.env.BASE_URL.replace(/\/$/, '');
+
   return (
     <CartProvider>
       <WishlistProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={baseName}>
           <SplashScreen />
           <CartDrawer />
           <BackToTop />

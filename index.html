@@ -9,6 +9,21 @@
     <title>VAELRIX — Dressed to Reign | Premium Streetwear</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var encoded = params.get('p');
+        if (!encoded) return;
+
+        var decoded = decodeURIComponent(encoded);
+        var basePath = window.location.pathname;
+        if (basePath.length > 1 && basePath.endsWith('/')) {
+          basePath = basePath.slice(0, -1);
+        }
+
+        window.history.replaceState(null, '', basePath + decoded);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
