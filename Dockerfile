@@ -11,11 +11,12 @@ RUN npm ci --no-audit --no-fund
 
 # Ensure platform-native bindings exist for glibc Linux builds (DigitalOcean builder).
 # Vite 8 uses Rolldown and LightningCSS, which rely on platform-specific packages.
-RUN ROLLDOWN_VERSION="$(node -p \"require('./node_modules/rolldown/package.json').version\")" \
-  && LIGHTNINGCSS_VERSION="$(node -p \"require('./node_modules/lightningcss/package.json').version\")" \
+RUN ROLLDOWN_VERSION="$(node -p 'require("./node_modules/rolldown/package.json").version')" \
+  && LIGHTNINGCSS_VERSION="$(node -p 'require("./node_modules/lightningcss/package.json").version')" \
   && npm install --no-save --no-audit --no-fund --no-package-lock \
     "@rolldown/binding-linux-x64-gnu@${ROLLDOWN_VERSION}" \
     "lightningcss-linux-x64-gnu@${LIGHTNINGCSS_VERSION}"
+
 
 # Copy source
 COPY . .
