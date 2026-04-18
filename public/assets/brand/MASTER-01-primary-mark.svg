@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <title>VAELRIX — Primary Mark (Crowned V, Gold on Obsidian)</title>
+  <desc>Master brandmark. Gold V with three-point crown diadem. Trinity of diamonds: mind, craft, sovereignty.</desc>
+  <rect width="1000" height="1000" fill="#0A0A0A"/>
+
+  <!-- Crown: three-point diadem. Center diamond is the apex jewel (larger, higher). -->
+  <g fill="#C5A35A">
+    <rect x="269" y="219" width="22" height="22" transform="rotate(45 280 230)"/>
+    <rect x="483" y="183" width="34" height="34" transform="rotate(45 500 200)"/>
+    <rect x="709" y="219" width="22" height="22" transform="rotate(45 720 230)"/>
+  </g>
+
+  <!-- The V: golden-ratio wedge, mitred corners, square caps. Stroke 52 = 5.2% of canvas for scale integrity. -->
+  <path d="M 280 310 L 500 790 L 720 310"
+        fill="none" stroke="#C5A35A" stroke-width="52"
+        stroke-linecap="square" stroke-linejoin="miter"/>
+</svg>

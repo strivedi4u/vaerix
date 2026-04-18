@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 640" width="1920" height="640">
+  <title>VAELRIX — Social Banner / Website Hero (Signature Glyphs)</title>
+  <desc>Obsidian field. Primary crowned V mark left, signature VAELRIX wordmark right.</desc>
+  <rect width="1920" height="640" fill="#0A0A0A"/>
+
+  <!-- Top & bottom gold rules -->
+  <line x1="160" y1="80" x2="1760" y2="80" stroke="#C5A35A" stroke-width="1"/>
+  <line x1="160" y1="560" x2="1760" y2="560" stroke="#C5A35A" stroke-width="1"/>
+
+  <!-- Corner ornament diamonds -->
+  <g fill="#C5A35A">
+    <rect x="155" y="75" width="10" height="10" transform="rotate(45 160 80)"/>
+    <rect x="1755" y="75" width="10" height="10" transform="rotate(45 1760 80)"/>
+    <rect x="155" y="555" width="10" height="10" transform="rotate(45 160 560)"/>
+    <rect x="1755" y="555" width="10" height="10" transform="rotate(45 1760 560)"/>
+  </g>
+
+  <!-- Primary crowned V mark (left) -->
+  <g transform="translate(400 320) scale(0.38)">
+    <g transform="translate(-500 -500)">
+      <g fill="#C5A35A">
+        <rect x="269" y="219" width="22" height="22" transform="rotate(45 280 230)"/>
+        <rect x="483" y="183" width="34" height="34" transform="rotate(45 500 200)"/>
+        <rect x="709" y="219" width="22" height="22" transform="rotate(45 720 230)"/>
+      </g>
+      <path d="M 280 310 L 500 790 L 720 310"
+            fill="none" stroke="#C5A35A" stroke-width="52"
+            stroke-linecap="square" stroke-linejoin="miter"/>
+    </g>
+  </g>
+
+  <!-- Vertical divider -->
+  <line x1="640" y1="240" x2="640" y2="400" stroke="#C5A35A" stroke-width="1"/>
+
+  <!-- Signature wordmark (right) -->
+  <g transform="translate(690 228)">
+    <!-- V glyph crown -->
+    <g fill="#C5A35A">
+      <rect x="19" y="36" width="10" height="10" transform="rotate(45 24 41)"/>
+      <rect x="113" y="14" width="14" height="14" transform="rotate(45 120 21)"/>
+      <rect x="211" y="36" width="10" height="10" transform="rotate(45 216 41)"/>
+    </g>
+    <!-- V glyph (ivory on dark) -->
+    <path d="M 24 75 L 120 186 L 216 75"
+          fill="none" stroke="#F5F1E8" stroke-width="14"
+          stroke-linecap="square" stroke-linejoin="miter"/>
+    <!-- AELRI text -->
+    <text x="275" y="186"
+          font-family="'Cormorant Garamond', 'EB Garamond', Georgia, serif"
+          font-size="150" font-weight="500" fill="#F5F1E8"
+          letter-spacing="26">AELRI</text>
+    <!-- X glyph: gold warp + ivory weft on dark -->
+    <g stroke-linecap="square" fill="none">
+      <path d="M 940 75 L 1040 186" stroke="#C5A35A" stroke-width="14"/>
+      <path d="M 1040 75 L 940 186" stroke="#F5F1E8" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Tagline -->
+  <text x="1190" y="450"
+        font-family="'Cormorant Garamond', Georgia, serif"
+        font-size="20" font-style="italic" fill="#C5A35A"
+        text-anchor="middle" letter-spacing="11">Dressed to Reign</text>
+
+  <!-- Footer origin -->
+  <text x="960" y="610"
+        font-family="'Cormorant Garamond', Georgia, serif"
+        font-size="12" fill="#C5A35A" text-anchor="middle" letter-spacing="10">EST · MMXXVI · INDIA</text>
+</svg>

@@ -1,0 +1,68 @@
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches:
+      - main
+      - production
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linter
+        run: npm run lint --if-present
+        continue-on-error: true
+
+      - name: Build application
+        run: npm run build
+        env:
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
+          VITE_APP_ENV: production
+
+      - name: Run type check
+        run: npx tsc --noEmit
+
+      - name: Setup DigitalOcean CLI
+        run: |
+          cd ~
+          wget https://github.com/digitalocean/doctl/releases/download/v1.102.0/doctl-1.102.0-linux-amd64.tar.gz
+          tar xf ~/doctl-1.102.0-linux-amd64.tar.gz
+          sudo mv ~/doctl /usr/local/bin
+
+      - name: Deploy to DigitalOcean App Platform
+        if: github.ref == 'refs/heads/main'
+        env:
+          DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_TOKEN }}
+        run: |
+          doctl auth init --access-token $DIGITALOCEAN_ACCESS_TOKEN
+          doctl apps update YOUR_APP_ID --spec app.yaml
+
+      - name: Create deployment status
+        uses: chrnorm/deployment-status@v2
+        if: always()
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          state: ${{ job.status }}
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+          auto_inactive: true

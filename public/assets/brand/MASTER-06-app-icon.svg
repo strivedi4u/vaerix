@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>VAELRIX — App Icon (Instagram, iOS, Favicon)</title>
+  <desc>Optimized for small sizes (32px+). Thicker V strokes, larger diamonds, tightened crown to maintain clarity in IG's 110px profile circle.</desc>
+  <rect width="1024" height="1024" fill="#0A0A0A"/>
+
+  <!-- Crown (enlarged for small-size legibility) -->
+  <g fill="#C5A35A">
+    <rect x="306" y="255" width="32" height="32" transform="rotate(45 322 271)"/>
+    <rect x="486" y="206" width="52" height="52" transform="rotate(45 512 232)"/>
+    <rect x="686" y="255" width="32" height="32" transform="rotate(45 702 271)"/>
+  </g>
+
+  <!-- V: thickened for thumbnail clarity (stroke 84 = 8.2% of canvas) -->
+  <path d="M 322 366 L 512 798 L 702 366"
+        fill="none" stroke="#C5A35A" stroke-width="84"
+        stroke-linecap="square" stroke-linejoin="miter"/>
+</svg>

@@ -1,0 +1,43 @@
+name: website
+services:
+- name: web
+  github:
+    branch: main
+    repo: YOUR_GITHUB_USERNAME/website
+  build_command: npm run build
+  environment_slug: node-js
+  envs:
+  - key: NODE_ENV
+    value: production
+  - key: NODE_OPTIONS
+    value: --max-old-space-size=512
+  http_port: 8080
+  source_dir: dist
+  static_sites:
+  - source_dir: dist
+    routes:
+    - path: /
+    - path: /(.*)
+      fallback_to_index: true
+  health_check:
+    http_path: /index.html
+  log_destination_ref: logs
+  run_command: npx serve -s dist -l 8080
+static_sites:
+- source_dir: dist
+  routes:
+  - path: /
+  - path: /(.*)
+    fallback_to_index: true
+ingress:
+  rules:
+  - match:
+      path:
+        prefix: /
+    component:
+      name: web
+databases: []
+log_destinations:
+  logs:
+    name: logs
+    type: sumologic

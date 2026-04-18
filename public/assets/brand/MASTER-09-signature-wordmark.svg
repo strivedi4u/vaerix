@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 500" width="2000" height="500">
+  <title>VAELRIX — Signature Wordmark (Dark Theme)</title>
+
+  <!-- V glyph: crowned V -->
+  <g>
+    <g fill="#C5A35A">
+      <rect x="152" y="133" width="14" height="14" transform="rotate(45 159 140)"/>
+      <rect x="290" y="105" width="20" height="20" transform="rotate(45 300 115)"/>
+      <rect x="434" y="133" width="14" height="14" transform="rotate(45 441 140)"/>
+    </g>
+    <path d="M 159 186 L 300 340 L 441 186"
+          fill="none" stroke="#C5A35A" stroke-width="22"
+          stroke-linecap="square" stroke-linejoin="miter"/>
+  </g>
+
+  <!-- AELRI text -->
+  <text x="1000" y="340"
+        font-family="'Cormorant Garamond', 'EB Garamond', Georgia, serif"
+        font-size="220" font-weight="500" fill="#F5F1E8"
+        text-anchor="middle" letter-spacing="40">AELRI</text>
+
+  <!-- X glyph -->
+  <g stroke-linecap="square" fill="none">
+    <path d="M 1559 186 L 1841 340" stroke="#C5A35A" stroke-width="22"/>
+    <path d="M 1841 186 L 1559 340" stroke="#F5F1E8" stroke-width="3"/>
+  </g>
+
+  <!-- Gold hairline flanks -->
+  <line x1="580" y1="260" x2="620" y2="260" stroke="#C5A35A" stroke-width="1"/>
+  <line x1="1380" y1="260" x2="1420" y2="260" stroke="#C5A35A" stroke-width="1"/>
+
+  <!-- Tagline -->
+  <text x="1000" y="420"
+        font-family="'Cormorant Garamond', Georgia, serif"
+        font-size="22" font-style="italic" fill="#C5A35A"
+        text-anchor="middle" letter-spacing="14">Dressed to Reign</text>
+</svg>

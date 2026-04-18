@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <title>VAELRIX — Circular Seal (Authenticity Mark)</title>
+  <desc>For hang tags, wax seals, authenticity stickers, invoice stamps, button backs. Full circular text ring + centered crowned V.</desc>
+  <rect width="1000" height="1000" fill="#0A0A0A"/>
+
+  <!-- Outer ring -->
+  <circle cx="500" cy="500" r="460" fill="none" stroke="#C5A35A" stroke-width="2"/>
+  <!-- Inner ring -->
+  <circle cx="500" cy="500" r="420" fill="none" stroke="#C5A35A" stroke-width="1"/>
+
+  <!-- Curved text: top arc -->
+  <defs>
+    <path id="topArc" d="M 160 500 A 340 340 0 0 1 840 500"/>
+    <path id="bottomArc" d="M 180 520 A 320 320 0 0 0 820 520"/>
+  </defs>
+
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-size="36" fill="#C5A35A" letter-spacing="14">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">VAELRIX · MAISON DE LUXE</textPath>
+  </text>
+
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-size="24" fill="#C5A35A" letter-spacing="10">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">EST · MMXXVI · INDIA</textPath>
+  </text>
+
+  <!-- Ornamental dots flanking the V -->
+  <circle cx="220" cy="500" r="4" fill="#C5A35A"/>
+  <circle cx="780" cy="500" r="4" fill="#C5A35A"/>
+
+  <!-- Centered crowned V mark -->
+  <g transform="translate(500 520) scale(0.42)">
+    <g transform="translate(-500 -500)">
+      <g fill="#C5A35A">
+        <rect x="269" y="219" width="22" height="22" transform="rotate(45 280 230)"/>
+        <rect x="483" y="183" width="34" height="34" transform="rotate(45 500 200)"/>
+        <rect x="709" y="219" width="22" height="22" transform="rotate(45 720 230)"/>
+      </g>
+      <path d="M 280 310 L 500 790 L 720 310"
+            fill="none" stroke="#C5A35A" stroke-width="52"
+            stroke-linecap="square" stroke-linejoin="miter"/>
+    </g>
+  </g>
+</svg>
