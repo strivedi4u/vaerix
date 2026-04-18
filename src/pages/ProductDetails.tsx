@@ -83,7 +83,7 @@ export default function ProductDetails() {
               { label: 'Home', to: '/' },
               { label: 'Shop', to: '/shop' },
               { label: product.name, to: '' },
-            ].map((crumb, idx, arr) => (
+            ].map((crumb, idx) => (
               <span key={crumb.label} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 {idx > 0 && <ChevronRight size={12} style={{ color: 'var(--text-ghost)' }} />}
                 {crumb.to ? (

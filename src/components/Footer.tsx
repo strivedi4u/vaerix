@@ -1,5 +1,4 @@
-import { ExternalLink, AtSign, Mail, MapPin, Truck, ShieldCheck, RotateCcw, CreditCard } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ExternalLink, AtSign, Truck, ShieldCheck, RotateCcw, CreditCard } from 'lucide-react';
 
 export default function Footer() {
   return (

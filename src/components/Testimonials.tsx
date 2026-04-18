@@ -1,6 +1,5 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Star, Quote } from 'lucide-react';
-import { useState } from 'react';
 
 const testimonials = [
   {
@@ -27,7 +26,6 @@ const testimonials = [
 
 export default function Testimonials() {
   const { ref, isVisible } = useScrollReveal<HTMLElement>({ threshold: 0.1 });
-  const [activeIdx, setActiveIdx] = useState(0);
 
   return (
     <section ref={ref} className="section" style={{ background: 'var(--bg-primary)' }}>
