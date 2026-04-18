@@ -28,22 +28,31 @@ export default function HeroVideo() {
         background: 'linear-gradient(to bottom, rgba(5,5,5,0.6) 0%, transparent 20%)',
       }} />
 
+      {/* Corner logo badge (kept off-center so it doesn't block the subject) */}
+      <motion.img
+        src="/assets/brand/logo.jpg"
+        alt="VAELRIX Crown"
+        initial={{ opacity: 0, scale: 0.9, y: 8 }}
+        animate={{ opacity: 0.85, scale: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        style={{
+          position: 'absolute',
+          left: '2rem',
+          bottom: '2rem',
+          width: 'clamp(56px, 7vw, 92px)',
+          height: 'auto',
+          borderRadius: '50%',
+          zIndex: 10,
+          pointerEvents: 'none',
+        }}
+      />
+
       {/* Content */}
       <div style={{
         position: 'relative', zIndex: 10, height: '100%',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         textAlign: 'center', padding: '0 2rem',
       }}>
-        {/* Crown V logo large */}
-        <motion.img
-          src="/assets/brand/logo.jpg"
-          alt="VAELRIX Crown"
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-          style={{ width: 'clamp(80px, 15vw, 140px)', height: 'auto', marginBottom: '2.5rem', borderRadius: '50%' }}
-        />
-
         {/* Tagline */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
