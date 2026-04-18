@@ -14,6 +14,10 @@ RUN npm ci
 RUN ROLLDOWN_VERSION="$(node -p "require('./node_modules/rolldown/package.json').version")" \
   && npm install --no-save --no-audit --no-fund "@rolldown/binding-linux-x64-musl@${ROLLDOWN_VERSION}"
 
+# Ensure LightningCSS native binding is available on Alpine/musl (used by Vite CSS minification).
+RUN LIGHTNINGCSS_VERSION="$(node -p "require('./node_modules/lightningcss/package.json').version")" \
+  && npm install --no-save --no-audit --no-fund "lightningcss-linux-x64-musl@${LIGHTNINGCSS_VERSION}"
+
 # Copy source code
 COPY . .
 
